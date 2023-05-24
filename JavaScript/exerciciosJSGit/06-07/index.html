@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div onmousedown="acesa()" onmouseup="sair()">
+        <div id="res">
+            <img src="https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true" alt="Minha Foto"/>
+        </div>
+    </div>
+    <form action="" id="form">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome"><br>
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" id="sobrenome"><br>
+        <button>Ver nome</button>
+    </form>
+    
+    <script type="text/javascript">
+    const res = document.querySelector('#res')
+    const saudacao = document.querySelector('#saudacao')
+    function acesa(){
+        res.innerHTML = '<img src="https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada-on.jpg?raw=true" alt="Minha Foto"/>'
+    }
+    function sair(){
+        res.innerHTML = '<img src="https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true" alt="Minha Foto" />'
+    }
+    const form = document.querySelector('#form')
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const nome = e.target.querySelector('#nome')
+            const sobrenome = e.target.querySelector('#sobrenome')
+            const res = document.querySelector('#res')
+
+            alert(`Olá ${nome.value}  ${sobrenome.value}`)
+        })
+    </script>
+
+</body>
+</html>

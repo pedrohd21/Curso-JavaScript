@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="texto">Digite um texto: </label>
+    <input type="text" id="texto">
+    <input type="button" value="comparar" onclick="verificar()">
+    <p id="resposta"></p>
+
+    <script>
+        function verificar(){
+            const texto = document.querySelector('#texto')
+            const textoF = texto.value
+            comparar = textoF.indexOf("dota")
+            if (comparar == -1){
+                resposta.innerHTML = `O texto digitado nao possui a palavra DOTA {${textoF}}`
+                return
+            }
+            resposta.innerHTML = `O texto digitado possui a palavra 'Dota'{${textoF}}`
+        }
+    </script>
+</body>
+</html>

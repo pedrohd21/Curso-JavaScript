@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #res{
+            background-color: white;
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="res">
+    <form action="" id="cores">
+        <label  for="verde">Verde</label>
+        <button type="submit" onmouseenter="verde()">Verde</button>
+        <label  for="vermelho">Vermelho</label>
+        <button type="submit" onmouseenter="vermelho()">Vermelho</button>
+
+    </form>
+</div>
+    <script>
+        const cores = document.querySelector('#cores')
+        cores.addEventListener('click', verde)
+        function verde(){
+            res.style.background = 'green'
+        }
+        function vermelho(){
+            res.style.background = 'red'
+        }
+    </script>
+</body>
+</html>

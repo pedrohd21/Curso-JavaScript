@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form">
+        <label for="n1">Numero1: </label>
+        <input type="text" id="n1">
+        <label for="n2">Numero1: </label>
+        <input type="text" id="n2">
+        <button type="submit">Resultado</button>
+    </form>
+    <p id="res"></p>
+    <script>
+        const form = document.querySelector('#form')
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            const n1 = e.target.querySelector('#n1')
+            const n2 = e.target.querySelector('#n2')
+            res.innerHTML = `A soma ${n1.value} + ${n2.value} = ${Number(n1.value) + Number(n2.value)}`
+        })
+    </script>
+</body>
+</html>

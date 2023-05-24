@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pais em que mora</h1>
+    Digite o nome do pais onde mora: <input type="text" id="pais">
+    <input type="button" value="enviar" onclick="enviar()">
+    <div id="res"></div>
+
+    <script>
+        function enviar(){
+            var pais = document.querySelector('#pais')
+            var pais_val = pais.value
+            res.innerHTML = `Vivendo no ${pais_val}  <br>`
+            if (pais_val.toUpperCase() === 'BRASIL'){
+                res.innerHTML += `Você é Brasileiro`
+            }else{
+                res.innerHTML += `Você é estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>

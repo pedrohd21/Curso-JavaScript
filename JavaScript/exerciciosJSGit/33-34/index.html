@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=a, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="ale">Digite um numero entre(0 a 10): </label>
+    <input type="text" id="ale">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <p id="res"></p>
+    <script>
+
+
+        function verificar() {
+            const aleatorio = Math.round(Math.random() * (10 - 1) + 1);
+            const verificar = document.querySelector("#ale");
+            const verificarF = Number(verificar.value)
+            if (verificarF) {
+                if (aleatorio == verificarF) {
+                    res.innerHTML += "################PARABENS#################### <br>"
+                    res.innerHTML += `     Parabens voce acertou o numero sorteado foi ${verificarF} <br>`
+                    res.innerHTML += '$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ <br>'
+                    return
+                }
+                res.innerHTML += `Voce errou o numero sorteado que foi ${aleatorio} <br>`
+            } else {
+                res.innerHTML = 'Digite um numero.<br>'
+            }
+
+        }
+
+        // alert(aleatorio)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+</head>
+
+<body>
+    <form action="" id="form">
+        <label for="cpf">Cpf</label>
+        <input type="text" id="cpf" maxlength="11"> <br>
+
+        <label>Cpf</label>
+        <input type="text" class="form-control" placeholder="Cpf2" id="cpf2" name="cpf2">
+        <br><button type="submit">Cpf Formatados</button>
+    </form>
+    <p id="res"></p>
+    <script>
+        const form = document.querySelector('#form')
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const cpf = e.target.querySelector('#cpf')
+            const cpf2 = e.target.querySelector('#cpf2')
+            const res = document.querySelector('#res')
+            res.innerHTML += `<strong>Cpf 1</strong>: ${cpf.value.slice(0, 3)}.${cpf.value.slice(3, 6)}.${cpf.value.slice(6, 9)}-${cpf.value.slice(9, 11)} <br>`
+            res.innerHTML += `Cpf 2: ${cpf2.value.slice(0, 3)}${cpf2.value.slice(4, 7)}${cpf2.value.slice(8, 11)}${cpf2.value.slice(12, 15)} <br>` 
+        })
+
+        $("#cpf2").mask("000.000.000-00");
+    </script>
+
+</body>
+
+</html>

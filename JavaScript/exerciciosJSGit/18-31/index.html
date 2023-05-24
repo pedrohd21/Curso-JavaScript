@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p id="res"></p>
+
+    <form id="par">
+        <h4>Par ou Impar</h4>
+        <label for="numero">Numero: </label>
+        <input type="text" id="numero">
+        <button type="submit">Resultado</button>
+    </form>
+    <p id="resposta"></p>
+
+    <form id="mult">
+        <h4>Multiplicacao</h4>
+        <label for="numero1">Numero: </label>
+        <input type="text" id="numero1">
+        <label for="numero2">Numero: </label>
+        <input type="text" id="numero2">
+        <input type="button" value="Resultado" onclick="multiplicar()">
+    </form>
+    <p id="resposta1"></p>
+
+    <form>
+        <h4>Desconto de 5%</h4>
+        <label for="desconto">Desconto: </label>
+        <input type="text" id="desconto">
+        <input type="button" value="Valor Desconto" onclick="descontos()">
+    </form>
+    <p id="result"></p>
+
+    <form>
+        <label for="ano">Ano de nascimento</label>
+        <input type="text" id="ano">
+        <input type="button" value="Ano de nascimento" onclick="ano_nascimento()">
+    </form>
+    <p id="res1"></p>
+
+    <p id="repetir"></p>
+    <p id="repetir1"></p>
+    
+    <script>
+        res.innerHTML = `Resto da divisão 12 /5 = ${5/2}`
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+body{
+    background: black;
+}
+#corpo{
+    background: white;
+    height: 250px;
+    width: 50%;
+
+    margin: 25%;
+    border-radius: 10px;
+}
+p{
+    padding: 0 20px
+}
+#resposta{
+    padding: 0 20px;
+}
+.far{
+    color: orange;
+}
+.fas{
+    color: green;
+}
